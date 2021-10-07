@@ -16,3 +16,10 @@ dificuldade de execução.
 ## Diagrama de classes
 
 ![Diagrama de classes](static/diagrama-classes.png)
+
+
+## Deploy
+https://todolist-devweb2.herokuapp.com/
+
+- login: admin 
+- senha:admin
