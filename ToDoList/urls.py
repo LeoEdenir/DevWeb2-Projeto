@@ -8,6 +8,8 @@ from core import views
 router = DefaultRouter()
 router.register('usuarios', views.UsuarioViewSet)
 router.register('categorias', views.CategoriaViewSet)
+router.register('tarefa', views.TarefaViewSet)
+router.register('execucao-tarefa', views.ExecucaoTarefaViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

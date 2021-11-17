@@ -14,6 +14,8 @@ class Tarefa(models.Model):
     descricao = models.TextField(blank=True, null=True)
     data_limite = models.DateField()
 
+    categoria = models.ForeignKey(Categoria, on_delete=models.PROTECT)
+
     def __str__(self):
         return self.nome
 
@@ -26,8 +28,8 @@ class ExecucaoTarefa(models.Model):
         CONCLUIDO = 3, "Concluído"
         CANCELADO = 4, "Cancelado"
 
-    tarefa = models.ForeignKey(Tarefa, on_delete=models.PROTECT)
-    usuario = models.ForeignKey(User, on_delete=models.PROTECT)
+    tarefa = models.ForeignKey(Tarefa, on_delete=models.PROTECT, related_name='execucoes_tarefa')
+    usuario = models.ForeignKey(User, on_delete=models.PROTECT, related_name='execucoes_tarefa')
     status = models.IntegerField(choices=StatusTarefa.choices, default=StatusTarefa.ABERTO)
 
     def __str__(self):
