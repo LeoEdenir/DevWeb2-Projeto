@@ -21,5 +21,10 @@ dificuldade de execução.
 ## Deploy
 https://todolist-devweb2.herokuapp.com/
 
+### Usuário admin
 - login: admin 
 - senha:admin
+
+### Usuário realizador de tarefas
+- login: Teste
+- senha: minhasenha1
